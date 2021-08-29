@@ -4,44 +4,6 @@
   height: 100vh;
 }
 
-aside {
-  flex: 5;
-  background: #835AFD;
-  color: #FAFAFA;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.asideContent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-aside img {
-  max-width: 320px;
-  height: 420px;
-  margin-bottom: 16px;
-
-  align-items: flex-start;
-}
-
-aside strong {
-  font: 700 36px 'Poppins';
-  max-width: 440px;
-  margin-bottom: 16px;
-}
-
-aside p {
-  font-size: 24px;
-  font-weight: 400;
-  max-width: 440px;
-}
-
 main {
   flex: 6;
   display:flex;
@@ -57,11 +19,25 @@ main {
 
   width: 70%;
   max-width: 320px;
-  padding: 5px;
 }
 
 .logo {
   margin-bottom: 56px;
+}
+
+.mainContent h2 {
+  font: 700 24px 'Poppins';
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.mainContent span {
+  font: 400 14px 'Roboto';
+  color: #737380;
+}
+
+.mainContent a {
+  color: #E559F9;
 }
 
 .divider {
