@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { AsideIllustration } from '../components/asideIllustration/asideIllustration';
 import { Button } from '../components/buttons/button.component';
@@ -7,8 +8,19 @@ import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
 import '../styles/auth.css';
+import { useAuth } from '../contexts/auth.context';
 
 export function Home() {
+  const history = useHistory();
+  const { isSigned, signIn } = useAuth();
+
+  async function handleCreateRoom () {
+
+    if (!isSigned) await signIn();
+
+    history.push('/createroom');
+  }
+
   return (
     <div id='pageAuth'>
       <AsideIllustration />
@@ -16,7 +28,11 @@ export function Home() {
       <main>
         <div className='mainContent'>
           <img className='logo' src={logoImg} alt='logo letmeask' />
-          <Button variant='social' icon={<img src={googleIconImg} alt='google icon' />} >
+          <Button
+            variant='social'
+            icon={<img src={googleIconImg} alt='google icon' />}
+            onClick={handleCreateRoom}
+          >
             Crie sua sala com o Google
           </Button>
           <div className='divider'>

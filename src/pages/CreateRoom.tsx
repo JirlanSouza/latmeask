@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { AsideIllustration } from '../components/asideIllustration/asideIllustration';
 import { Button } from '../components/buttons/button.component';
@@ -23,7 +24,7 @@ export function CreateRoom() {
             placeholder='Nome da sala'
           />
           <Button variant='primary' type='submit'>Criar sala</Button>
-          <span>Quer entrar em umal já existente? <a href='#'>Clique aqui</a></span>
+          <span>Quer entrar em umal já existente? <Link to='/'>Clique aqui</Link></span>
         </div>
       </main>
     </div>

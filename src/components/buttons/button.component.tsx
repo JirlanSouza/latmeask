@@ -16,7 +16,6 @@ export const Button: React.FC<ButtonProps> = ({ icon, children, variant, ...prop
       x: event.clientX - event.target.offsetLeft,
       y: event.clientY - event.target.offsetTop
     }
-    console.log(position);
     setClickPosition(position);
     setPress(true);
   }

@@ -1,12 +1,14 @@
 import React from 'react';
-import { CreateRoom } from './pages/CreateRoom';
-import { Home } from './pages/Home.page';
 
+import { AuthContextProvider } from './contexts/auth.context';
+import { Routes } from './routes';
 import './styles/global.css';
 
 function App() {
   return (
-    <CreateRoom />
+    <AuthContextProvider>
+      <Routes />
+    </AuthContextProvider>
   );
 }
 

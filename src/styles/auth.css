@@ -42,39 +42,28 @@ main {
 
 .divider {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin: 32px 0;
+  color: #A8A8B3;
 
   width: 100%;
   overflow-x: hidden;
 }
 
-.divider span {
-  position: relative;
-  display: flex;
-  margin: 32px 0;
-  color: #A8A8B3;
+.divider::before {
+  content: '';
+  flex: 1;
+  height: 2px;
+  margin-right: 8px;
+  background: #A8A8B3;
 }
 
-.divider span::before {
+.divider::after {
   content: '';
-  position: absolute;
-  width: 50%;
+  flex: 1;
   height: 2px;
+  margin-left: 8px;
   background: #A8A8B3;
-  top: 50%;
-  bottom: 50%;
-  right: calc(100% + 16px);
-}
-
-.divider span::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background: #A8A8B3;
-  top: 50%;
-  bottom: 50%;
-  left: calc(100% + 16px);
 }
